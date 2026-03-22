@@ -1,0 +1,47 @@
+[
+  {
+    "id": "779e1ffd-36a7-47b4-ac20-595d0ec54c1a",
+    "userId": "c7c5dbfa-e860-431f-ab6f-7bbb6a0ec667",
+    "items": [
+      {
+        "productId": "2",
+        "quantity": 1,
+        "unitPrice": 25
+      },
+      {
+        "productId": "3",
+        "quantity": 11,
+        "unitPrice": 60
+      }
+    ],
+    "deliveryInfo": {
+      "address": "Проезд Слободской 6",
+      "phone": "+375 (29) 173-88-54",
+      "email": "snowchest67@tut.by",
+      "paymentMethod": "online"
+    },
+    "totalPrice": 685,
+    "status": "pending",
+    "createdAt": "2026-03-19T15:49:58.581Z"
+  },
+  {
+    "id": "e6428c05-fd36-4e9d-b4ff-8d0a35727299",
+    "userId": "c7c5dbfa-e860-431f-ab6f-7bbb6a0ec667",
+    "items": [
+      {
+        "productId": "1",
+        "quantity": 3,
+        "unitPrice": 45
+      }
+    ],
+    "deliveryInfo": {
+      "address": "Проезд Слободской 6",
+      "phone": "+375-29-173-88-54",
+      "email": "snowchest67@tut.by",
+      "paymentMethod": "cash"
+    },
+    "totalPrice": 135,
+    "status": "pending",
+    "createdAt": "2026-03-19T15:50:33.341Z"
+  }
+]
