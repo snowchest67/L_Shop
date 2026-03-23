@@ -1,0 +1,133 @@
+[
+  {
+    "id": "779e1ffd-36a7-47b4-ac20-595d0ec54c1a",
+    "userId": "c7c5dbfa-e860-431f-ab6f-7bbb6a0ec667",
+    "items": [
+      {
+        "productId": "2",
+        "quantity": 1,
+        "unitPrice": 25
+      },
+      {
+        "productId": "3",
+        "quantity": 11,
+        "unitPrice": 60
+      }
+    ],
+    "deliveryInfo": {
+      "address": "Проезд Слободской 6",
+      "phone": "+375 (29) 173-88-54",
+      "email": "snowchest67@tut.by",
+      "paymentMethod": "online"
+    },
+    "totalPrice": 685,
+    "status": "pending",
+    "createdAt": "2026-03-19T15:49:58.581Z"
+  },
+  {
+    "id": "e6428c05-fd36-4e9d-b4ff-8d0a35727299",
+    "userId": "c7c5dbfa-e860-431f-ab6f-7bbb6a0ec667",
+    "items": [
+      {
+        "productId": "1",
+        "quantity": 3,
+        "unitPrice": 45
+      }
+    ],
+    "deliveryInfo": {
+      "address": "Проезд Слободской 6",
+      "phone": "+375-29-173-88-54",
+      "email": "snowchest67@tut.by",
+      "paymentMethod": "cash"
+    },
+    "totalPrice": 135,
+    "status": "pending",
+    "createdAt": "2026-03-19T15:50:33.341Z"
+  },
+  {
+    "id": "93839dd1-9509-4907-b15c-a5aa83709dd2",
+    "userId": "2a03df24-bdd9-4a3f-94d0-77f603db0f26",
+    "items": [
+      {
+        "productId": "2",
+        "quantity": 4,
+        "unitPrice": 25
+      }
+    ],
+    "deliveryInfo": {
+      "address": "Любимова 42",
+      "phone": "+375 (29) 382-84-08",
+      "email": "zlatagr2006@gmail.com",
+      "paymentMethod": "card"
+    },
+    "totalPrice": 100,
+    "status": "pending",
+    "createdAt": "2026-03-22T13:02:16.830Z"
+  },
+  {
+    "id": "4108c600-ed3c-4eb5-bd9f-1fb169aa2915",
+    "userId": "ad5c4aa5-d14a-4483-a957-1e7ca44691f7",
+    "items": [
+      {
+        "productId": "3",
+        "quantity": 4,
+        "unitPrice": 60
+      }
+    ],
+    "deliveryInfo": {
+      "address": "Любимова 42",
+      "phone": "+375 (29) 382-84-08",
+      "email": "zlatagr2006@gmail.com",
+      "paymentMethod": "card"
+    },
+    "totalPrice": 240,
+    "status": "pending",
+    "createdAt": "2026-03-22T13:04:04.699Z"
+  },
+  {
+    "id": "0ccdff35-1978-4d45-8dcd-6bdcd4d81336",
+    "userId": "ad5c4aa5-d14a-4483-a957-1e7ca44691f7",
+    "items": [
+      {
+        "productId": "1",
+        "quantity": 2,
+        "unitPrice": 45
+      },
+      {
+        "productId": "3",
+        "quantity": 2,
+        "unitPrice": 60
+      }
+    ],
+    "deliveryInfo": {
+      "address": "Любимова 42",
+      "phone": "+375 (29) 382-84-08",
+      "email": "zlatagr2006@gmail.com",
+      "paymentMethod": "cash"
+    },
+    "totalPrice": 210,
+    "status": "pending",
+    "createdAt": "2026-03-22T13:04:43.938Z"
+  },
+  {
+    "id": "f163bcd7-fa64-4723-a433-05e69b0014a4",
+    "userId": "ad5c4aa5-d14a-4483-a957-1e7ca44691f7",
+    "items": [
+      {
+        "productId": "3",
+        "productName": "Сыворотка с витамином C",
+        "quantity": 1,
+        "unitPrice": 60
+      }
+    ],
+    "deliveryInfo": {
+      "address": "Любимова 42",
+      "phone": "+375 (29) 382-84-08",
+      "email": "zlatagr2006@gmail.com",
+      "paymentMethod": "cash"
+    },
+    "totalPrice": 60,
+    "status": "pending",
+    "createdAt": "2026-03-22T13:45:06.501Z"
+  }
+]

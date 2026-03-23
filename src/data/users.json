@@ -1,0 +1,56 @@
+[
+  {
+    "id": "7b5cf0af-ad0c-4d20-bbd1-0017b3dd4dd4",
+    "name": "Иванчик Петров",
+    "email": "ivan2@mail.com",
+    "login": "ivan1123",
+    "phone": "+375255321128",
+    "password": "123456",
+    "createdAt": "2026-03-14T19:40:04.958Z"
+  },
+  {
+    "id": "8f3d89a9-68b1-4fcf-8eb8-0d1a5c33b388",
+    "name": "Кирилл",
+    "email": "stepyshow@gmail.com",
+    "login": "kirill123",
+    "phone": "+375291610338",
+    "password": "123123",
+    "createdAt": "2026-03-16T11:18:45.639Z"
+  },
+  {
+    "id": "c7c5dbfa-e860-431f-ab6f-7bbb6a0ec667",
+    "name": "Тимофей Логвин",
+    "email": "snowchest67@tut.by",
+    "login": "snowchest67@tut.by",
+    "phone": "+375 (29) 173-88-54",
+    "password": "123456789",
+    "createdAt": "2026-03-19T15:49:18.425Z"
+  },
+  {
+    "id": "2a03df24-bdd9-4a3f-94d0-77f603db0f26",
+    "name": "Zlata Grosul",
+    "email": "zlatagr2006@gmail.com",
+    "login": "zlatagr2006@gmail.com",
+    "phone": "+375 (29) 382-84-08",
+    "password": "123456z",
+    "createdAt": "2026-03-22T12:54:07.383Z"
+  },
+  {
+    "id": "ad5c4aa5-d14a-4483-a957-1e7ca44691f7",
+    "name": "Zlata",
+    "email": "zlata2006@gmail.com",
+    "login": "zlata2006@gmail.com",
+    "phone": "+375 (29) 382-84-08",
+    "password": "123456",
+    "createdAt": "2026-03-22T13:03:48.035Z"
+  },
+  {
+    "id": "f4cdb6fd-62cb-41c8-9ab5-2f0aa8c5da1a",
+    "name": "Zlata Grosul1",
+    "email": "zlatagr2009@gmail.com",
+    "login": "zlatagr2009@gmail.com",
+    "phone": "+375 (29) 382-84-08",
+    "password": "123456789",
+    "createdAt": "2026-03-23T11:35:25.807Z"
+  }
+]
