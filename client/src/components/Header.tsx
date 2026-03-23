@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import { useApp } from '../contexts/AppContext'
+import { useApp } from '../context/AppContext'
 
 export default function Header() {
 	const { isAuthenticated, user, cartItemsCount, logout } = useApp()

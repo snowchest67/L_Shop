@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Product } from '../types'
 import { cartAPI } from '../api/cart'
-import { useApp } from '../contexts/AppContext'
+import { useApp } from '../context/AppContext'
 
 interface ProductCardProps {
 	product: Product

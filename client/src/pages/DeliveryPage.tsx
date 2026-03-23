@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { cartAPI } from '../api/cart'
 import { deliveryAPI } from '../api/delivery'
 import { DeliveryInfo } from '../types'
-import { useApp } from '../contexts/AppContext'
+import { useApp } from '../context/AppContext'
 
 export default function DeliveryPage() {
 	const [cartEmpty, setCartEmpty] = useState(false)

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { authAPI } from '../api/auth'
-import { useApp } from '../contexts/AppContext'
+import { useApp } from '../context/AppContext'
 
 export default function AuthPage() {
 	const [mode, setMode] = useState<'login' | 'register'>('login')

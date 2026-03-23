@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { cartAPI } from '../api/cart'
 import { CartWithDetails } from '../types'
-import { useApp } from '../contexts/AppContext'
+import { useApp } from '../context/AppContext'
 
 export default function CartPage() {
 	const [cart, setCart] = useState<CartWithDetails | null>(null)
