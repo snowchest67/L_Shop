@@ -1,0 +1,29 @@
+[
+  {
+    "id": "7b5cf0af-ad0c-4d20-bbd1-0017b3dd4dd4",
+    "name": "Иванчик Петров",
+    "email": "ivan2@mail.com",
+    "login": "ivan1123",
+    "phone": "+375255321128",
+    "password": "123456",
+    "createdAt": "2026-03-14T19:40:04.958Z"
+  },
+  {
+    "id": "8f3d89a9-68b1-4fcf-8eb8-0d1a5c33b388",
+    "name": "Кирилл",
+    "email": "stepyshow@gmail.com",
+    "login": "kirill123",
+    "phone": "+375291610338",
+    "password": "123123",
+    "createdAt": "2026-03-16T11:18:45.639Z"
+  },
+  {
+    "id": "c7c5dbfa-e860-431f-ab6f-7bbb6a0ec667",
+    "name": "Тимофей Логвин",
+    "email": "snowchest67@tut.by",
+    "login": "snowchest67@tut.by",
+    "phone": "+375 (29) 173-88-54",
+    "password": "123456789",
+    "createdAt": "2026-03-19T15:49:18.425Z"
+  }
+]
