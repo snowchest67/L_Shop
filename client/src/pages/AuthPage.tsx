@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { authAPI } from '../api/auth'
-import { useApp } from '../context/AppContext'
+import { useApp } from '../contexts/AppContext'
 
 export default function AuthPage() {
 	const [mode, setMode] = useState<'login' | 'register'>('login')
@@ -41,89 +41,113 @@ export default function AuthPage() {
 
 			await refreshState()
 			navigate('/')
-		} catch (err: any) {
+		} catch (err: unknown) {
+			const errorMessage = err instanceof Error ? err.message : 'Ошибка при авторизации'
 			console.error(err)
-			setError(err?.message || 'Ошибка при авторизации')
+			setError(errorMessage)
 		} finally {
 			setLoading(false)
 		}
 	}
 
 	return (
-		<div className='auth-page'>
-			<div className='auth-switch'>
-				<button
-					className={`btn ${mode === 'login' ? 'btn-primary' : 'btn-secondary'}`}
-					type='button'
-					onClick={() => setMode('login')}
-				>
-					Вход
-				</button>
-				<button
-					className={`btn ${mode === 'register' ? 'btn-primary' : 'btn-secondary'}`}
-					type='button'
-					onClick={() => setMode('register')}
-				>
-					Регистрация
-				</button>
+		<div className='container'>
+			<div className='auth-page'>
+				<div className='auth-container'>
+					<div className='auth-tabs'>
+						<button
+							className={`auth-tab ${mode === 'login' ? 'active' : ''}`}
+							type='button'
+							onClick={() => setMode('login')}
+						>
+							Вход
+						</button>
+						<button
+							className={`auth-tab ${mode === 'register' ? 'active' : ''}`}
+							type='button'
+							onClick={() => setMode('register')}
+						>
+							Регистрация
+						</button>
+					</div>
+
+					<form className='auth-form' onSubmit={handleSubmit}>
+						{mode === 'register' && (
+							<>
+								<div className='form-group'>
+									<label htmlFor='name'>Полное имя</label>
+									<input
+										id='name'
+										placeholder='Иван Иванов'
+										value={form.name}
+										onChange={e => handleChange('name', e.target.value)}
+										required
+									/>
+								</div>
+
+								<div className='form-group'>
+									<label htmlFor='phone'>Телефон</label>
+									<input
+										id='phone'
+										type='tel'
+										placeholder='+375 (29) 000 00 00'
+										value={form.phone}
+										onChange={e => handleChange('phone', e.target.value)}
+										required
+									/>
+								</div>
+							</>
+						)}
+
+						<div className='form-group'>
+							<label htmlFor='login'>Логин / Email</label>
+							<input
+								id='login'
+								placeholder={mode === 'login' ? 'example@email.com' : 'Ваш логин'}
+								value={form.login}
+								onChange={e => handleChange('login', e.target.value)}
+								required
+							/>
+						</div>
+
+						{mode === 'register' && (
+							<div className='form-group'>
+								<label htmlFor='email'>Email</label>
+								<input
+									id='email'
+									type='email'
+									placeholder='example@email.com'
+									value={form.email}
+									onChange={e => handleChange('email', e.target.value)}
+									required
+								/>
+							</div>
+						)}
+
+						<div className='form-group'>
+							<label htmlFor='password'>Пароль</label>
+							<input
+								id='password'
+								type='password'
+								placeholder='Минимум 6 символов'
+								value={form.password}
+								onChange={e => handleChange('password', e.target.value)}
+								required
+							/>
+						</div>
+
+						{error && <p className='text-error'>{error}</p>}
+
+						<button className='btn btn-primary btn-block btn-large' type='submit' disabled={loading}>
+							{loading
+								? 'Выполняется...'
+								: mode === 'login'
+									? 'Войти'
+									: 'Зарегистрироваться'}
+						</button>
+					</form>
+				</div>
 			</div>
-
-			<form className='auth-form' onSubmit={handleSubmit}>
-				{mode === 'register' && (
-					<>
-						<div className='form-group'>
-							<label htmlFor='name'>Имя</label>
-							<input
-								id='name'
-								value={form.name}
-								onChange={e => handleChange('name', e.target.value)}
-								required
-							/>
-						</div>
-
-						<div className='form-group'>
-							<label htmlFor='phone'>Телефон</label>
-							<input
-								id='phone'
-								value={form.phone}
-								onChange={e => handleChange('phone', e.target.value)}
-								required
-							/>
-						</div>
-					</>
-				)}
-
-				<div className='form-group'>
-					<label htmlFor='login'>Логин / Email</label>
-					<input
-						id='login'
-						value={form.login}
-						onChange={e => handleChange('login', e.target.value)}
-						required
-					/>
-				</div>
-
-				<div className='form-group'>
-					<label htmlFor='password'>Пароль</label>
-					<input
-						id='password'
-						type='password'
-						value={form.password}
-						onChange={e => handleChange('password', e.target.value)}
-						required
-					/>
-				</div>
-
-				{error && <p className='text-error'>{error}</p>}
-
-				<button className='btn btn-primary' type='submit' disabled={loading}>
-					{loading
-						? 'Выполняется...'
-						: mode === 'login'
-							? 'Войти'
-							: 'Зарегистрироваться'}
-				</button>
-			</form>
 		</div>
 	)
 }

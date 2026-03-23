@@ -41,23 +41,28 @@ export default function HomePage() {
 	}, [filters])
 
 	return (
-		<div>
+		<div className='container'>
 			<h1>Каталог косметики</h1>
 
 			<Filters value={filters} onChange={setFilters} />
 
-			{loading && <p>Загрузка товаров...</p>}
+			{loading && <p className='text-center'>Загрузка товаров...</p>}
 			{error && <p className='text-error'>{error}</p>}
 
 			{!loading && !error && products.length === 0 && (
 				<p className='no-products'>Товары не найдены</p>
 			)}
 
-			<div className='products-grid'>
-				{products.map(product => (
-					<ProductCard key={product.id} product={product} />
-				))}
-			</div>
+			{!loading && !error && products.length > 0 && (
+				<>
+					<p className='products-count'>Найдено товаров: {products.length}</p>
+					<div className='products-grid'>
+						{products.map(product => (
+							<ProductCard key={product.id} product={product} />
+						))}
+					</div>
+				</>
+			)}
 		</div>
 	)
 }

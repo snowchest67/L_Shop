@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
-import { AppProvider, useApp } from './context/AppContext'
+import { AppProvider, useApp } from './contexts/AppContext'
 import Header from '../src/components/Header'
 import HomePage from './pages/HomePage'
 import AuthPage from './pages/AuthPage'
@@ -52,15 +52,24 @@ function AppRoutes() {
 export default function App() {
 	return (
 		<AppProvider>
-			<Header />
-			<main className='container'>
-				<AppRoutes />
-			</main>
-			<footer>
-				<div className='container'>
-					<p>&copy; BeautyShop</p>
-				</div>
-			</footer>
+			<div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+				<Header />
+				<main className='container' style={{ flex: 1 }}>
+					<AppRoutes />
+				</main>
+				<footer>
+					<div className='container'>
+						<div>
+							<p style={{marginBottom: '0.5rem'}}>&copy; BeautyShop</p>
+							<p style={{fontSize: '0.9rem', color: '#999'}}>
+								Делали: Тимофей, Злата, Аня, Полина
+								<br />
+								<span style={{fontSize: '1.5rem', fontWeight: 'bold', color: '#ffffff'}}>10</span>
+							</p>
+						</div>
+					</div>
+				</footer>
+			</div>
 		</AppProvider>
 	)
 }

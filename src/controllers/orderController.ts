@@ -34,6 +34,7 @@ export const createOrder = async (req: AuthRequest, res: Response) => {
 			const product = products.find(p => p.id === item.productId)
 			return {
 				productId: item.productId,
+				productName: product?.name ?? 'Неизвестный товар',
 				quantity: item.quantity,
 				unitPrice: product?.price ?? 0,
 			}

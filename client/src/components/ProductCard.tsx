@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Product } from '../types'
 import { cartAPI } from '../api/cart'
-import { useApp } from '../context/AppContext'
+import { useApp } from '../contexts/AppContext'
 
 interface ProductCardProps {
 	product: Product
@@ -33,38 +33,38 @@ export default function ProductCard({ product }: ProductCardProps) {
 
 	return (
 		<article className='product-card'>
-			<div>
+			<div className='product-content'>
 				<h3 className='product-title'>{product.name}</h3>
 				<p className='product-description'>{product.description}</p>
 			</div>
 
-			<div className='product-price'>{product.price.toLocaleString()} BYN</div>
+			<div className='product-footer'>
+				<div className='product-price'>{product.price.toLocaleString()} BYN</div>
 
-			<div className='product-quantity'>
-				<button
-					className='qty-btn'
-					type='button'
-					onClick={() => setQuantity(q => Math.max(1, q - 1))}
-				>
-					-
-				</button>
-				<input
-					className='qty-input'
-					type='number'
-					min={1}
-					value={quantity}
-					onChange={e => setQuantity(Math.max(1, Number(e.target.value) || 1))}
-				/>
-				<button
-					className='qty-btn'
-					type='button'
-					onClick={() => setQuantity(q => q + 1)}
-				>
-					+
-				</button>
-			</div>
+				<div className='product-quantity'>
+					<button
+						className='qty-btn'
+						type='button'
+						onClick={() => setQuantity(q => Math.max(1, q - 1))}
+					>
+						−
+					</button>
+					<input
+						className='qty-input'
+						type='number'
+						min={1}
+						value={quantity}
+						onChange={e => setQuantity(Math.max(1, Number(e.target.value) || 1))}
+					/>
+					<button
+						className='qty-btn'
+						type='button'
+						onClick={() => setQuantity(q => q + 1)}
+					>
+						+
+					</button>
+				</div>
 
-			<div className='product-actions'>
 				<button
 					className='btn btn-primary'
 					type='button'

@@ -23,5 +23,25 @@
       }
     ],
     "updatedAt": "2026-03-19T15:58:47.353Z"
+  },
+  {
+    "userId": "2a03df24-bdd9-4a3f-94d0-77f603db0f26",
+    "items": [],
+    "updatedAt": "2026-03-22T13:02:16.830Z"
+  },
+  {
+    "userId": "ad5c4aa5-d14a-4483-a957-1e7ca44691f7",
+    "items": [
+      {
+        "productId": "3",
+        "quantity": 2
+      }
+    ],
+    "updatedAt": "2026-03-22T13:48:01.542Z"
+  },
+  {
+    "userId": "f4cdb6fd-62cb-41c8-9ab5-2f0aa8c5da1a",
+    "items": [],
+    "updatedAt": "2026-03-23T11:35:25.845Z"
   }
 ]

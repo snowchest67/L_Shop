@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { cartAPI } from '../api/cart'
 import { CartWithDetails } from '../types'
-import { useApp } from '../context/AppContext'
+import { useApp } from '../contexts/AppContext'
 
 export default function CartPage() {
 	const [cart, setCart] = useState<CartWithDetails | null>(null)
@@ -76,17 +76,19 @@ export default function CartPage() {
 
 	if (!cart || cart.items.length === 0) {
 		return (
-			<div className='cart-empty'>
-				<h2>Корзина пуста</h2>
-				<p>
-					Перейдите в <a href='/'>каталог</a>, чтобы добавить товары
-				</p>
+			<div className='container'>
+				<div className='cart-empty'>
+					<h2>Корзина пуста</h2>
+					<p>
+						Перейдите в <a href='/'>каталог</a>, чтобы добавить товары
+					</p>
+				</div>
 			</div>
 		)
 	}
 
 	return (
-		<div>
+		<div className='container'>
 			<h1>Корзина</h1>
 
 			<div className='cart-items'>
@@ -101,17 +103,17 @@ export default function CartPage() {
 
 						<div className='cart-item-quantity'>
 							<button
-								className='btn btn-secondary'
+								className='btn-quantity'
 								disabled={item.quantity <= 1}
 								onClick={() =>
 									updateQuantity(item.productId, item.quantity - 1)
 								}
 							>
-								-
+								−
 							</button>
 							<span className='quantity'>{item.quantity}</span>
 							<button
-								className='btn btn-secondary'
+								className='btn-quantity'
 								onClick={() =>
 									updateQuantity(item.productId, item.quantity + 1)
 								}
@@ -125,7 +127,7 @@ export default function CartPage() {
 						</div>
 
 						<button
-							className='btn btn-danger'
+							className='btn btn-remove'
 							onClick={() => removeItem(item.productId)}
 						>
 							×
@@ -135,23 +137,19 @@ export default function CartPage() {
 			</div>
 
 			<div className='cart-summary'>
-				<div className='cart-total'>
-					<span>Итого:</span>
-					<span className='total-price'>
-						{cart.totalPrice.toLocaleString()} BYN
-					</span>
-				</div>
 				<div className='cart-total-items'>
-					<span>Товаров:</span>
-					<span>{cart.totalItems} шт.</span>
+					Товаров: <span>{cart.totalItems} шт.</span>
+				</div>
+				<div className='cart-total'>
+					Итого: <span>{cart.totalPrice.toLocaleString()} BYN</span>
 				</div>
 
-				<div className='cart-actions'>
-					<button className='btn btn-secondary' onClick={clearCart}>
-						Очистить корзину
+				<div className='checkout-buttons'>
+					<button className='btn btn-secondary btn-large' onClick={clearCart}>
+						Очистить
 					</button>
 					<button
-						className='btn btn-primary'
+						className='btn btn-primary btn-large'
 						onClick={() => navigate('/delivery')}
 					>
 						Оформить заказ

@@ -25,5 +25,32 @@
     "phone": "+375 (29) 173-88-54",
     "password": "123456789",
     "createdAt": "2026-03-19T15:49:18.425Z"
+  },
+  {
+    "id": "2a03df24-bdd9-4a3f-94d0-77f603db0f26",
+    "name": "Zlata Grosul",
+    "email": "zlatagr2006@gmail.com",
+    "login": "zlatagr2006@gmail.com",
+    "phone": "+375 (29) 382-84-08",
+    "password": "123456z",
+    "createdAt": "2026-03-22T12:54:07.383Z"
+  },
+  {
+    "id": "ad5c4aa5-d14a-4483-a957-1e7ca44691f7",
+    "name": "Zlata",
+    "email": "zlata2006@gmail.com",
+    "login": "zlata2006@gmail.com",
+    "phone": "+375 (29) 382-84-08",
+    "password": "123456",
+    "createdAt": "2026-03-22T13:03:48.035Z"
+  },
+  {
+    "id": "f4cdb6fd-62cb-41c8-9ab5-2f0aa8c5da1a",
+    "name": "Zlata Grosul1",
+    "email": "zlatagr2009@gmail.com",
+    "login": "zlatagr2009@gmail.com",
+    "phone": "+375 (29) 382-84-08",
+    "password": "123456789",
+    "createdAt": "2026-03-23T11:35:25.807Z"
   }
 ]
